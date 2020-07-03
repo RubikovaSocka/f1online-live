@@ -1,0 +1,164 @@
+$name-width: 110px;
+$team-width: 90px;
+$time-width: 70px;
+$laps-width: 40px;
+$row-height: 25px;
+
+$name-width-1024: 110px;
+$team-width-1024: 75px;
+$time-width-1024: 60px;
+$laps-width-1024: 40px;
+
+$name-width-1280: 120px;
+$team-width-1280: 80px;
+$time-width-1280: 65px;
+$laps-width-1280: 40px;
+
+$name-width-1360: 125px;
+$team-width-1360: 80px;
+$time-width-1360: 75px;
+$laps-width-1360: 40px;
+
+.container {
+  width: calc(100% - 20px);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  font-family: "HK Grotesk";
+  font-size: 13px;
+
+
+  .item {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  i {
+    width: 100%;
+  }
+}
+.title {
+  width: 100%;
+  font-family: "Cabin";
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0;
+  //text-transform: uppercase;
+}
+.fixedPart {
+  width: 140px;
+}
+.scrollablePart {
+  overflow-x: scroll;
+  overflow-y: unset;
+  width: calc(100% - 40px - 110px);
+}
+.scrollableRow {
+  width: 355px;
+}
+.row {
+  height: $row-height;
+
+  * {
+    display: inline-block;
+  }
+  &.header {
+    font-weight: 600;
+  }
+  .position {
+    width: 23px;
+    padding-right: 10px;
+    text-align: end;
+  }
+  .driverName {
+    width: $name-width;
+    font-weight: 600;
+  }
+  .teamName {
+    width: $team-width;
+  }
+  .time {
+    width: $time-width;
+  }
+  .laps {
+    width: $laps-width;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+
+}
+@media only screen and (min-width: 390px) {
+
+}
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .row {
+    .driverName {
+      width: $name-width-1024;
+    }
+    .teamName {
+      width: $team-width-1024;
+    }
+    .time {
+      width: $time-width-1024;
+    }
+    .laps {
+      width: $laps-width-1024;
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .row {
+    .driverName {
+      width: $name-width-1280;
+    }
+    .teamName {
+      width: $team-width-1280;
+    }
+    .time {
+      width: $time-width-1280;
+    }
+    .laps {
+      width: $laps-width-1280;
+    }
+  }
+  .fixedPart {
+    width: 155px;
+  }
+  .scrollablePart {
+    overflow-x: scroll;
+    overflow-y: unset;
+    width: calc(100% - 40px - 125px);
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .row {
+    .driverName {
+      width: $name-width-1360;
+    }
+    .teamName {
+      width: $team-width-1360;
+    }
+    .time {
+      width: $time-width-1360;
+    }
+    .laps {
+      width: $laps-width-1360;
+    }
+  }
+  .scrollableRow {
+    width: 100%;
+  }
+}

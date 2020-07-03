@@ -1,0 +1,78 @@
+.container {
+  width: calc(100% - 25px);
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .item {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  i {
+    width: 100%;
+  }
+}
+.articlesTitle {
+  font-family: "Cabin";
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  h2 {
+    margin: 0;
+  }
+  span {
+    font-family: "HK Grotesk";
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 415px;
+    margin-top: -15px;
+    height: initial;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .item {
+      width: 198px;
+      margin-bottom: 20px;
+    }
+
+    i {
+      width: 198px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    width: 500px;
+    margin-top: -20px;
+    margin-bottom: 0;
+    .item {
+      width: 240px;
+    }
+
+    i {
+      width: 240px;
+    }
+  }
+}

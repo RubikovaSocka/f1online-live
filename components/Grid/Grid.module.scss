@@ -1,0 +1,125 @@
+.container {
+  width: calc(100%);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  //margin-right: 35px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  font-family: "HK Grotesk";
+  font-size: 13px;
+
+  .item {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  i {
+    width: 100%;
+  }
+}
+.title {
+  font-family: "Cabin";
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0;
+  width: 100%;  
+  //text-transform: uppercase;
+}
+.fixedPart {
+  width: 140px;
+}
+.scrollablePart {
+  overflow-x: scroll;
+  overflow-y: unset;
+  width: calc(100% - 40px - 110px);
+}
+.scrollableRow {
+  width: 220px;
+}
+.row {
+  height: 25px;
+
+  * {
+    display: inline-block;
+  }
+  &.header {
+    font-weight: 600;
+  }
+  .position {
+    width: 23px;
+    padding-right: 10px;
+    text-align: end;
+  }
+  .driverName {
+    width: 110px;
+    font-weight: 600;
+  }
+  .teamName {
+    width: 80px;
+  }
+  .time {
+    width: 105px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 581px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    //margin-right: 35px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    font-family: "HK Grotesk";
+    font-size: 13px;
+
+    .item {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    i {
+      width: 100%;
+    }
+  }
+  .fixedPart {
+    width: 150px;
+  }
+  .scrollableRow {
+    width: 270px;
+  }
+  .row {
+    height: 25px;
+
+    * {
+      display: inline-block;
+    }
+    &.header {
+      font-weight: 600;
+    }
+    .position {
+      width: 23px;
+      padding-right: 10px;
+      text-align: end;
+    }
+    .driverName {
+      width: 120px;
+      font-weight: 600;
+    }
+    .teamName {
+      width: 105px;
+    }
+    .time {
+      width: 120px;
+    }
+  }
+}

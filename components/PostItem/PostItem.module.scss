@@ -1,0 +1,65 @@
+.container {
+  margin: 15px 20px 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.postTime {
+  font-family: "HK Grotesk";
+  font-size: 14px;
+  font-weight: 600;
+  width: 40px;
+  flex-shrink: 0;
+}
+.postTextContent {
+  width: calc(100% - 40px);
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.text {
+  font-family: "HK Grotesk";
+  font-size: 14px;
+}
+.embed {
+  width: 100%;
+  margin: 10px 0;
+  iframe {
+    width: calc(100vw - 42px) !important;
+    min-width: 0 !important;
+  }
+}
+.img {
+  width: 450px;
+  margin: 10px 0;
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  .embed {
+    width: 370px;   
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .embed {
+    width: 410px;   
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .embed {
+    width: 450px;
+  }
+}

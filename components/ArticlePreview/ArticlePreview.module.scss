@@ -1,0 +1,155 @@
+.container {
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 4px 0;
+
+  .imgContainer {
+    height: 60px;
+    width: 96px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      height: 100%;
+      min-width: 100%;
+      //left: -50%;
+      //height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+.titleContainer {
+  width: calc(100% - 89px);
+  font-family: "Cabin";
+  margin-left: 7px;
+
+  .title {
+    margin: 0;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .date {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 0;
+
+    .blackBotGradient {
+      background: linear-gradient(
+        0deg,
+        rgba(1, 1, 1, 0.95) 0%,
+        rgba(1, 1, 1, 0.75) 20%,
+        rgba(0, 0, 0, 0.5) 75%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    a {
+      width: 100%;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  
+    .imgContainer {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+  
+      img {
+        position: absolute;
+        height: 100%;
+        min-width: 100%;
+        //left: -50%;
+        //height: 100%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+    }
+    img {
+      //position: absolute;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  
+    .titleContainer {
+      width: 100%;
+      height: 70px;
+      bottom: 0;
+      margin: 0;
+  
+      //padding: 12px;
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+  
+      .title {
+        padding: 12px;
+        margin: 0;
+        //overflow: auto;
+  
+        font-size: 20px;
+        font-family: "Cabin", "Source Sans Pro";
+        font-weight: 700;
+  
+        text-align: start;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+      }
+    }
+  }
+  .container {
+    height: 141px;
+
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      margin: auto;
+    }
+
+    .titleContainer {
+      height: 82px;
+
+      .title {
+        padding: 8px 9px;
+
+        line-height: 17px;
+        scroll-behavior: none;
+        font-size: 14px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    height: 150px;
+  }
+}

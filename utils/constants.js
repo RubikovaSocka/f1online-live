@@ -1,0 +1,8 @@
+export const ARTICLES = "articles"
+export const FP1 = "fp1"
+export const FP2 = "fp2"
+export const FP3 = "fp3"
+export const Q = "q"
+export const R = "r"
+export const GRID = "grid"
+export const CALENDAR = "calendar"

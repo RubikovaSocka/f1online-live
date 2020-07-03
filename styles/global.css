@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "HK Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../pages/fonts/HKGrotesk/hkgrotesk-regular-webfont.ttf")
+      format("truetype"),
+    url("../pages/fonts/HKGrotesk/hkgrotesk-regular-webfont.woff")
+      format("woff"),
+    url("../pages/fonts/HKGrotesk/hkgrotesk-regular-webfont.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 600;
+  src: url("../pages/fonts/HKGrotesk/hkgrotesk-semibold-webfont.ttf")
+      format("truetype"),
+    url("../pages/fonts/HKGrotesk/hkgrotesk-semibold-webfont.woff")
+      format("woff"),
+    url("../pages/fonts/HKGrotesk/hkgrotesk-semibold-webfont.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../pages/fonts/HKGrotesk/hkgrotesk-bold-webfont.ttf")
+      format("truetype"),
+    url("../pages/fonts/HKGrotesk/hkgrotesk-bold-webfont.woff") format("woff"),
+    url("../pages/fonts/HKGrotesk/hkgrotesk-bold-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../pages/fonts/Cabin/Cabin-Regular.ttf") format("truetype"),
+    url("../pages/fonts/Cabin/Cabin-Regular.woff") format("woff"),
+    url("../pages/fonts/Cabin/Cabin-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cabin";
+  font-weight: 600;
+  src: url("../pages/fonts/Cabin/Cabin-SemiBold.ttf") format("truetype"),
+    url("../pages/fonts/Cabin/Cabin-SemiBold.woff") format("woff"),
+    url("../pages/fonts/Cabin/Cabin-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cabin";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../pages/fonts/Cabin/Cabin-Bold.ttf") format("truetype"),
+    url("../pages/fonts/Cabin/Cabin-Bold.woff") format("woff"),
+    url("../pages/fonts/Cabin/Cabin-Bold.woff2") format("woff2");
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+#__next {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.blackBotGradient {
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 1, 0.95) 0%,
+    rgba(1, 1, 1, 0.75) 20%,
+    rgba(0, 0, 0, 0.5) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.zoomImageContainer img,
+.zoomImageContainer a img {
+  transition: transform 0.3s ease;
+}
+.fast-spin {
+  -webkit-animation: fa-spin 1s infinite linear;
+  animation: fa-spin 1s infinite linear;
+}
