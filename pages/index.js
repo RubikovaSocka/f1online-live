@@ -145,19 +145,19 @@ export default class index extends Component {
           className={`${index === 0 ? styles.selected : ""}`}
           onClick={() => this.changeIndex(0)}
         >
-          <i class="fas fa-bars"></i>
+          <i className="fas fa-bars"></i>
         </button>
         <button
           className={`${index === 1 ? styles.selected : ""}`}
           onClick={() => this.changeIndex(1)}
         >
-          <i class="far fa-newspaper"></i>
+          <i className="far fa-newspaper"></i>
         </button>
         <button
           className={`${index === 2 ? styles.selected : ""}`}
           onClick={() => this.changeIndex(2)}
         >
-          <i class="far fa-comments"></i>
+          <i className="far fa-comments"></i>
         </button>
       </div>
     );
@@ -289,7 +289,11 @@ export default class index extends Component {
           ) : (
             ""
           )}
+           <a className={styles.partnerImageLink} href="https://elisplus.sk/" target="_blank">
+          <img className={styles.partnerImage} src="/images/riso.png"></img>
+        </a>
         </div>
+       
       </div>
     );
 

@@ -203,8 +203,24 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
     }
   }
 }
+.partnerImageLink {
+  width: 60%;
+  margin: auto;
+  margin-top: 80px;
+}
+.partnerImage {
+  width: 100%;
+}
 
 @media only screen and (min-width: 1024px) {
+  .partnerImageLink {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .partnerImage {
+    width: 100%;
+  }
   .mobileButtons {
     display: none;
   }
