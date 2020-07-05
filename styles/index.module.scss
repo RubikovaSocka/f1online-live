@@ -50,7 +50,8 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 .rightPanel {
   width: 100%;
 
-  height: calc(100% - 50px);
+  height: 100%;
+  //height: 100%;
 
   z-index: 5;
   background-color: white;
@@ -204,13 +205,46 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   }
 }
 .partnerImageLink {
-  width: 60%;
-  margin: auto;
-  margin-top: 80px;
+  width: 50%;
+  margin: 10px auto;
+  //margin-top: 10px;
 }
 .partnerImage {
   width: 100%;
 }
+@media only screen and (min-width: 360px) { 
+  .rightPanel {
+    height: calc(100% - 10px);
+  }
+}
+@media only screen and (min-width: 370px) { 
+  .rightPanel {
+    height: calc(100% - 15px);
+  }
+}
+
+@media only screen and (min-width: 380px) { 
+  .rightPanel {
+    height: calc(100% - 20px);
+  }
+}
+@media only screen and (min-width: 390px) { 
+  .rightPanel {
+    height: calc(100% - 25px);
+  }
+}
+@media only screen and (min-width: 400px) { 
+  .rightPanel {
+    height: calc(100% - 30px);
+  }
+}
+@media only screen and (min-width: 420px) { 
+  .rightPanel {
+    height: calc(100% - 40px);
+  }
+}
+
+
 
 @media only screen and (min-width: 1024px) {
   .partnerImageLink {
