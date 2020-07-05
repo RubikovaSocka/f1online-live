@@ -13,14 +13,14 @@ export default class PostsBlock extends Component {
     this.state = {
       userLoadMinInterval: 10, //aspon 10 sekund - countdownje 10 sekund
       userLoadCountdown: 0,
-      autoLoadMinInterval: 16,
+      autoLoadMinInterval: 30,
       posts: [],
       hasMoreOldPosts: true,
       scrolledToTop: true,
 
       autoload: false,
       spinnerLoading: false,
-      focusMaxTimeout: 15,
+      focusMaxTimeout: 25,
       focusTimeoutRunning: false,
       windowHeight: 600
     };
@@ -30,15 +30,14 @@ export default class PostsBlock extends Component {
 
   fetchMoreOldPosts = () => {
     const { posts } = this.state;
-     axios
+    axios
       .get(
         `https://wpadmin.f1online.sk/wp-json/wp/v2/online_spravy?per_page=15${
           posts.length > 0
             ? `&before=${posts[posts.length - 1].date}&after=${moment().format(
                 "YYYY-MM-DDT00:00:01"
               )}`
-            : `&after=${moment().format(
-              "YYYY-MM-DDT00:00:01")}`
+            : `&after=${moment().format("YYYY-MM-DDT00:00:01")}`
         }`
       )
       .then(res =>
@@ -56,10 +55,11 @@ export default class PostsBlock extends Component {
     axios
       .get(
         `https://wpadmin.f1online.sk/wp-json/wp/v2/online_spravy?per_page=15${
-          posts.length > 0 ? `&after=${moment().format(
-            "YYYY-MM-DDT00:00:01"
-          )}&after=${posts[0].date}` : `&after=${moment().format(
-            "YYYY-MM-DDT00:00:01")}`
+          posts.length > 0
+            ? `&after=${moment().format("YYYY-MM-DDT00:00:01")}&after=${
+                posts[0].date
+              }`
+            : `&after=${moment().format("YYYY-MM-DDT00:00:01")}`
         }`
       )
       .then(res => {
@@ -88,8 +88,7 @@ export default class PostsBlock extends Component {
       this.setState({
         scrolledToTop: false
       });
-    } else if (!this.state.scrolledToTop && window.pageYOffset 
-      < 30) {
+    } else if (!this.state.scrolledToTop && window.pageYOffset < 30) {
       this.setState({
         scrolledToTop: true
       });
