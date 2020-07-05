@@ -36,12 +36,12 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 }
 .swipableContainer {
   height: calc(100vh - 50px);
-  //> div {
-   // height: 100%;
-    //> div {
-      //height: 100%;
-    //}
-  //}
+  > div {
+   height: 100%;
+    > div {
+      height: 100%;
+    }
+  }
 }
 .feedContainer {
   width: 100%;
@@ -211,12 +211,12 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 }
 .partnerImage {
   width: 100%;
-}
+}/*
 @media only screen and (min-width: 360px) { 
   .rightPanel {
-    height: calc(100% - 10px);
+    height: 1
   }
-}
+}/*
 @media only screen and (min-width: 370px) { 
   .rightPanel {
     height: calc(100% - 15px);
@@ -243,10 +243,19 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
     height: calc(100% - 40px);
   }
 }
-
+*/
 
 
 @media only screen and (min-width: 1024px) {
+  .swipableContainer {
+    height: calc(100vh - 50px);
+    > div {
+     height: initial;
+     > div {
+     height: initial;
+     }
+    }
+  }
   .partnerImageLink {
     width: 100%;
     margin: auto;
