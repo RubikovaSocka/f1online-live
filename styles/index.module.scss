@@ -35,7 +35,7 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   box-shadow: $boxshadow;
 }
 .swipableContainer {
-  height: calc(100% - 50px);
+  height: calc(100vh - 50px);
   > div {
    height: 100%;
     > div {
@@ -45,13 +45,13 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 }
 .feedContainer {
   width: 100%;
-  
 }
 .rightPanel {
   width: 100%;
 
   height: 100%;
-  //height: 100%;
+  height: 100%;
+  height: calc(100% - 50px);
 
   z-index: 5;
   background-color: white;
@@ -64,7 +64,7 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 
 .topArticlesPanel {
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100% - 50px) !important;
   padding-left: 25px;
   overflow-x: hidden;
   position: none;
@@ -208,6 +208,7 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   width: 50%;
   margin: 10px auto;
   //margin-top: 10px;
+  padding-bottom: 30px;
 }
 .partnerImage {
   width: 100%;
@@ -260,6 +261,7 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
     width: 100%;
     margin: auto;
     margin-top: 50px;
+    padding: 0;
   }
   .partnerImage {
     width: 100%;
