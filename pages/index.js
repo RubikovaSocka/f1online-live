@@ -17,7 +17,7 @@ export default class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      infoboxPanelOpened: true,
+      infoboxPanelOpened: false,
       opened: ARTICLES,
       fpResultsPanelOpened: true,
       index: 0,
