@@ -32,7 +32,6 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   height: 100%;
   z-index: 4;
   background-color: white;
-  box-shadow: $boxshadow;
 }
 .swipableContainer {
   height: calc(100vh - 50px);
@@ -55,7 +54,6 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 
   z-index: 5;
   background-color: white;
-  box-shadow: $boxshadow;
 
   //display: flex;
   //flex-direction: column;
