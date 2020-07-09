@@ -7,7 +7,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pageviewInSeconds: 90
+      pageviewInSeconds: 60
     };
   }
 
