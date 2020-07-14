@@ -47,27 +47,34 @@ export default class DiskusnyBox extends React.Component {
     console.log("after");
     console.log(inside.head);*/
 
-    let iframee = document.getElementById("discourse-embed-frame");
+    var iframee = document.getElementById("discourse-embed-frame");
+    var iframe = document.getElementById("discourse-embed-frame");
+    
+
     if (iframee.attachEvent) {
       iframee.attachEvent("onload", function() {
-        console.log(iframee);
+        var elmnt = iframe.contentWindow.document.getElementsByTagName("p")[0];
+    elmnt.style.display = "none";
+        /*console.log(iframee);
         var inside = iframee.contentDocument || iframee.contentWindow.document;
         inside.head.appendChild(cssLink);
 
         window.frames[0].document.body.style.backgroundColor = "#d45f44";
         inside.body.style.backgroundColor = "#d45f45";
 
-        inside.getElementById("body").style.background = "#4db520";
+        inside.getElementById("body").style.background = "#4db520";*/
         //document.getElementById('discourse-embed-frame').contentWindow.document.getElementById('header').style.background = "#4db585";
       });
     } else {
       iframee.onload = function() {
-        console.log(iframee);
+        var elmnt = iframe.contentWindow.document.getElementsByTagName("p")[0];
+    elmnt.style.display = "none";
+        /*console.log(iframee);
         var inside = iframee.contentDocument || iframee.contentWindow.document;
         inside.head.appendChild(cssLink);
         window.frames[0].document.body.style.backgroundColor = "#d45f44";
         inside.body.style.backgroundColor = "#d45f48";
-        inside.getElementById("body").style.background = "#4db521";
+        inside.getElementById("body").style.background = "#4db521";*/
       };
     }
 
