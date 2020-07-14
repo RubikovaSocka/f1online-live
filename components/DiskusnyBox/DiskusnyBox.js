@@ -24,21 +24,20 @@ export default class DiskusnyBox extends React.Component {
     cssLink.href = "/styles/iframestyle.css";
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
+/*
+    var iframe = document.getElementsByTagName("discourse-embed-frame");
+    iframe.addEventListener("load", function() {
+       the JS equivalent of the answer
+       *
+       * var node = document.createElement('style');
+       * node.appendChild(document.createTextNode('body { background: #fff; }'));
+       * window.frames[0].document.head.appendChild(node);
+       
 
-    let iframee = document.getElementById("discourse-embed-frame");
-    if (iframee.attachEvent) {
-      iframee.attachEvent("onload", function() {
-        console.log(iframee);
-        var inside = iframee.contentDocument || iframee.contentWindow.document;
-        inside.head.appendChild(cssLink);
-      });
-    } else {
-      iframee.onload = function() {
-        console.log(iframee);
-        var inside = iframee.contentDocument || iframee.contentWindow.document;
-        inside.head.appendChild(cssLink);
-      };
-    } /*
+      // the cleaner and simpler way
+      window.frames[0].document.body.style.backgroundColor = "#d45f44";
+    });*/
+     /*
     console.log(iframee);
     var inside = iframee.contentDocument || this.iframe.contentWindow.document;
     console.log(inside);
@@ -47,6 +46,24 @@ export default class DiskusnyBox extends React.Component {
     inside.head.appendChild(cssLink);
     console.log("after");
     console.log(inside.head);*/
+
+    
+    let iframee = document.getElementById("discourse-embed-frame");
+    if (iframee.attachEvent) {
+      iframee.attachEvent("onload", function() {
+        console.log(iframee);
+        var inside = iframee.contentDocument || iframee.contentWindow.document;
+        inside.head.appendChild(cssLink);
+        window.frames[0].document.body.style.backgroundColor = "#d45f44";
+      });
+    } else {
+      iframee.onload = function() {
+        console.log(iframee);
+        var inside = iframee.contentDocument || iframee.contentWindow.document;
+        inside.head.appendChild(cssLink);
+        window.frames[0].document.body.style.backgroundColor = "#d45f44";
+      };
+    } 
 
     //document.getElementById("discourse-embed-frame").html.head.appendChild(cssLink);
   }
