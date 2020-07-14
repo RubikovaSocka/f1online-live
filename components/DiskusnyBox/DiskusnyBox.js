@@ -25,13 +25,20 @@ export default class DiskusnyBox extends React.Component {
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
 
-    var iframee = document.getElementById("discourse-embed-frame");
-    iframee.onload(() => {
-      console.log(iframee);
-      var inside =
-        iframee.contentDocument || this.iframe.contentWindow.document;
-      inside.head.appendChild(cssLink);
-    });
+    let iframee = document.getElementById("discourse-embed-frame");
+    if (iframee.attachEvent) {
+      iframee.attachEvent("onload", function() {
+        console.log(iframee);
+        var inside = iframee.contentDocument || iframee.contentWindow.document;
+        inside.head.appendChild(cssLink);
+      });
+    } else {
+      iframee.onload = function() {
+        console.log(iframee);
+        var inside = iframee.contentDocument || iframee.contentWindow.document;
+        inside.head.appendChild(cssLink);
+      };
+    } /*
     console.log(iframee);
     var inside = iframee.contentDocument || this.iframe.contentWindow.document;
     console.log(inside);
@@ -39,7 +46,7 @@ export default class DiskusnyBox extends React.Component {
     console.log(inside.head);
     inside.head.appendChild(cssLink);
     console.log("after");
-    console.log(inside.head);
+    console.log(inside.head);*/
 
     //document.getElementById("discourse-embed-frame").html.head.appendChild(cssLink);
   }
