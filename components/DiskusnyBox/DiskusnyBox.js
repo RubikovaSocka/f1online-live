@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./DiskusnyBox.module.scss";
-import $ from "";
 
 export default class DiskusnyBox extends React.Component {
   static propTypes = {
