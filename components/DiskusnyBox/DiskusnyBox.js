@@ -24,7 +24,7 @@ export default class DiskusnyBox extends React.Component {
     cssLink.href = "/styles/iframestyle.css";
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
-/*
+    /*
     var iframe = document.getElementsByTagName("discourse-embed-frame");
     iframe.addEventListener("load", function() {
        the JS equivalent of the answer
@@ -37,7 +37,7 @@ export default class DiskusnyBox extends React.Component {
       // the cleaner and simpler way
       window.frames[0].document.body.style.backgroundColor = "#d45f44";
     });*/
-     /*
+    /*
     console.log(iframee);
     var inside = iframee.contentDocument || this.iframe.contentWindow.document;
     console.log(inside);
@@ -47,14 +47,15 @@ export default class DiskusnyBox extends React.Component {
     console.log("after");
     console.log(inside.head);*/
 
-    
     let iframee = document.getElementById("discourse-embed-frame");
     if (iframee.attachEvent) {
       iframee.attachEvent("onload", function() {
         console.log(iframee);
         var inside = iframee.contentDocument || iframee.contentWindow.document;
         inside.head.appendChild(cssLink);
+
         window.frames[0].document.body.style.backgroundColor = "#d45f44";
+        inside.body.style.backgroundColor = "#d45f45";
       });
     } else {
       iframee.onload = function() {
@@ -62,8 +63,9 @@ export default class DiskusnyBox extends React.Component {
         var inside = iframee.contentDocument || iframee.contentWindow.document;
         inside.head.appendChild(cssLink);
         window.frames[0].document.body.style.backgroundColor = "#d45f44";
+        inside.body.style.backgroundColor = "#d45f48";
       };
-    } 
+    }
 
     //document.getElementById("discourse-embed-frame").html.head.appendChild(cssLink);
   }
