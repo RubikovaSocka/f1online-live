@@ -24,7 +24,7 @@ export default class Diskusia extends Component {
       <>
         {/*<div id="discourse-comments"></div>*/}
         <DiskusnyBox
-          discourseUrl="https://discourse.f1online.sk/"
+          discourseUrl="https://forum.f1online.sk/"
           discourseEmbedUrl="https://live.f1online.sk/diskusia2"
         />
       </>
