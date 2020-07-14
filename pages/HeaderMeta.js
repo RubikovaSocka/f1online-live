@@ -4,7 +4,7 @@ import Head from "next/head";
 export default function HeaderMeta() {
   return (
     <Head>
-      <title key="meta_title">F1online.sk Live</title>
+      <title key="meta_title">{`F1online.sk Live ${Math.random()}`}</title>
       <link rel="shortcut icon" href="/favicon.ico" />
       <link
         rel="stylesheet"
@@ -14,7 +14,7 @@ export default function HeaderMeta() {
       <meta
         key="meta_ogtitle"
         property="og:title"
-        content={`F1online.sk Live`}
+        content={`F1online.sk Live ${Math.random()}`}
       />
       <meta key="meta_type" property="og:type" content="website" />
       <meta
