@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Head from "next/head";
 import styles from "../styles/index.module.scss";
 import Chat from "../components/ChatComponent/Chat";
 import PostsBlock from "../components/PostsBlock/PostsBlock";
