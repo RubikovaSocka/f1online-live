@@ -26,7 +26,9 @@ export default class DiskusnyBox extends React.Component {
     cssLink.type = "text/css";
 
     var iframee = document.getElementById("discourse-embed-frame");
+    console.log(iframee);
     var inside = iframee.contentDocument || this.iframe.contentWindow.document;
+    console.log(inside);
     console.log("before");
     console.log(inside.head);
     inside.head.appendChild(cssLink);
