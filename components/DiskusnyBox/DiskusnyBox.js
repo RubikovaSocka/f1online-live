@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./DiskusnyBox.module.scss";
+import $ from "";
 
 export default class DiskusnyBox extends React.Component {
   static propTypes = {
@@ -26,6 +27,12 @@ export default class DiskusnyBox extends React.Component {
     cssLink.type = "text/css";
 
     var iframee = document.getElementById("discourse-embed-frame");
+    iframee.onload(() => {
+      console.log(iframee);
+      var inside =
+        iframee.contentDocument || this.iframe.contentWindow.document;
+      inside.head.appendChild(cssLink);
+    });
     console.log(iframee);
     var inside = iframee.contentDocument || this.iframe.contentWindow.document;
     console.log(inside);
@@ -34,6 +41,7 @@ export default class DiskusnyBox extends React.Component {
     inside.head.appendChild(cssLink);
     console.log("after");
     console.log(inside.head);
+
     //document.getElementById("discourse-embed-frame").html.head.appendChild(cssLink);
   }
 
