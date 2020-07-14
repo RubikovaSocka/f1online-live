@@ -53,7 +53,7 @@ export default class DiskusnyBox extends React.Component {
 
     if (iframee.attachEvent) {
       iframee.attachEvent("onload", function() {
-        var elmnt = iframe.contentWindow.document.getElementsByTagName("p")[0];
+        var elmnt = iframe.contentWindow.document.getElementsByTagName("html")[0];
     elmnt.style.display = "none";
         /*console.log(iframee);
         var inside = iframee.contentDocument || iframee.contentWindow.document;
@@ -67,7 +67,7 @@ export default class DiskusnyBox extends React.Component {
       });
     } else {
       iframee.onload = function() {
-        var elmnt = iframe.contentWindow.document.getElementsByTagName("p")[0];
+        var elmnt = iframe.contentWindow.document.getElementsByTagName("html")[0];
     elmnt.style.display = "none";
         /*console.log(iframee);
         var inside = iframee.contentDocument || iframee.contentWindow.document;
