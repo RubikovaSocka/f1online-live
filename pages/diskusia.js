@@ -5,7 +5,7 @@ export default class Diskusia extends Component {
   componentDidMount() {
     let DiscourseEmbed = {
       discourseUrl: "https://discourse.f1online.sk/",
-      discourseEmbedUrl: "https://live.f1online.sk/diskusia"
+      topicId: 300
     };
 
     let d = document.createElement("script");
@@ -15,13 +15,19 @@ export default class Diskusia extends Component {
     console.log(d.src);
     (
       document.getElementsByTagName("head")[0] ||
-      document.getElementsByTagName("discourse-comments")[0]
+      document.getElementsByTagName("body")[0]
     ).appendChild(d);
   }
 
   render() {
     return (
-      <div id='discourse-comments'></div>
+      <>
+        <div id="discourse-comments"></div>
+        <DiskusnyBox
+          discourseUrl="https://discourse.f1online.sk/"
+          discourseEmbedUrl="https://live.f1online.sk/diskusia"
+        />
+      </>
     );
   }
 }
