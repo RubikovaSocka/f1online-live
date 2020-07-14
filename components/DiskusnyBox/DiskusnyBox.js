@@ -56,6 +56,10 @@ export default class DiskusnyBox extends React.Component {
 
         window.frames[0].document.body.style.backgroundColor = "#d45f44";
         inside.body.style.backgroundColor = "#d45f45";
+
+        iframee.contentWindow.document.getElementById('body').style.background = "#4db520";
+        //document.getElementById('discourse-embed-frame').contentWindow.document.getElementById('header').style.background = "#4db585";
+       
       });
     } else {
       iframee.onload = function() {
@@ -64,6 +68,7 @@ export default class DiskusnyBox extends React.Component {
         inside.head.appendChild(cssLink);
         window.frames[0].document.body.style.backgroundColor = "#d45f44";
         inside.body.style.backgroundColor = "#d45f48";
+        iframee.contentWindow.document.getElementById('body').style.background = "#4db521";
       };
     }
 
