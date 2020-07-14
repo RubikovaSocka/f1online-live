@@ -1,4 +1,9 @@
 .box {
   //background-color: var(--basic-back-color);
   background-color: black;
+  height: 500px;
+
+  iframe {
+    height: 100%;
+  }
 }
