@@ -30,7 +30,7 @@ export default class Article extends Component {
         {/*<div id="discourse-comments"></div>*/}
         <DiskusnyBox
           discourseUrl="https://discourse.f1online.sk/"
-          discourseEmbedUrl="https://live.f1online.sk/diskusia2"
+          discourseEmbedUrl={`https://live.f1online.sk/clanky/${this.props.articeID}`}
         />
       </>
     );
