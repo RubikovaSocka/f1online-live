@@ -4,7 +4,7 @@ import Head from "next/head";
 export default function HeaderMeta() {
   return (
     <Head>
-      <title key="meta_title">{`F1online.sk Live ${Math.random()}`}</title>
+      
       <link rel="shortcut icon" href="/favicon.ico" />
       <link
         rel="stylesheet"

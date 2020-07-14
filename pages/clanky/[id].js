@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DiskusnyBox from "../../components/DiskusnyBox";
+import Head from "next/head";
 
 export default class Article extends Component {
   static getInitialProps ({ query: { id } }) {
@@ -25,8 +26,10 @@ export default class Article extends Component {
   }
 
   render() {
+    console.log("rendered sss " + Math.random()) 
     return (
       <>
+      <Head><title key="meta_title">{`F1online.sk Live ${this.props.articleID}`}</title></Head>
         {/*<div id="discourse-comments"></div>*/}
         <DiskusnyBox
           discourseUrl="https://discourse.f1online.sk/"

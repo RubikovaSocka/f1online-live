@@ -289,11 +289,14 @@ export default class index extends Component {
           ) : (
             ""
           )}
-           <a className={styles.partnerImageLink} href="https://elisplus.sk/" target="_blank">
-          <img className={styles.partnerImage} src="/images/riso.png"></img>
-        </a>
+          <a
+            className={styles.partnerImageLink}
+            href="https://elisplus.sk/"
+            target="_blank"
+          >
+            <img className={styles.partnerImage} src="/images/riso.png"></img>
+          </a>
         </div>
-       
       </div>
     );
 
@@ -331,20 +334,28 @@ export default class index extends Component {
     );
     if (this.state.windowWidth > 1023) {
       return (
-        <div className={styles.container}>
-          {leftPanel}
-          <div className={styles.feedContainer}>
-            <PostsBlock />
+        <>
+          <Head>
+            <title key="meta_title">{`F1online.sk Live ${this.props.articleID}`}</title>
+          </Head>
+          <div className={styles.container}>
+            {leftPanel}
+            <div className={styles.feedContainer}>
+              <PostsBlock />
+            </div>
+            <div className={styles.rightPanel}>
+              <Chat />
+            </div>
+            {dataPanel}
           </div>
-          <div className={styles.rightPanel}>
-            <Chat />
-          </div>
-          {dataPanel}
-        </div>
+        </>
       );
     } else {
       return (
         <>
+          <Head>
+            <title key="meta_title">{`F1online.sk Live ${this.props.articleID}`}</title>
+          </Head>
           <div className={styles.swipableContainer}>
             {dataPanel}
             <SwipeableViews
