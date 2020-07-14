@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DiskusnyBox from "../components/DiskusnyBox";
+import DiskusnyBox from "../components/DiskusnyBox/DiskusnyBox";
 
 export default class Diskusia extends Component {
   componentDidMount() {

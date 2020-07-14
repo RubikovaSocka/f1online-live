@@ -26,7 +26,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log("app render " + Math.random())
     const { Component, pageProps } = this.props;
     return (
       <>

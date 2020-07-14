@@ -67,7 +67,7 @@ body {
   height: 100%;
   margin: 0;
 
-  --basic-back-color: green;
+  background-color: transparent;
 }
 
 * {
@@ -124,4 +124,8 @@ img {
 .fast-spin {
   -webkit-animation: fa-spin 1s infinite linear;
   animation: fa-spin 1s infinite linear;
+}
+
+.discourse {
+  background-color: green !important;
 }

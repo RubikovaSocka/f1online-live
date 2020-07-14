@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DiskusnyBox from "../../components/DiskusnyBox";
+import DiskusnyBox from "../../components/DiskusnyBox/DiskusnyBox";
 import Head from "next/head";
 
 export default class Article extends Component {
@@ -8,7 +8,6 @@ export default class Article extends Component {
   }
 
   render() {
-    console.log("rendered sss " + Math.random()) 
     return (
       <>
       <Head><title key="meta_title">{`F1online.sk Live ${this.props.articleID}`}</title></Head>
