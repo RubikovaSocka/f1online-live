@@ -66,6 +66,8 @@ body {
 #__next {
   height: 100%;
   margin: 0;
+
+  --basic-back-color: green;
 }
 
 * {

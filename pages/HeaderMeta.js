@@ -4,17 +4,15 @@ import Head from "next/head";
 export default function HeaderMeta() {
   return (
     <Head>
-      
       <link rel="shortcut icon" href="/favicon.ico" />
       <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
       />
-      <link key="meta_style" rel="stylesheet" href="/light-theme.css" />
       <meta
         key="meta_ogtitle"
         property="og:title"
-        content={`F1online.sk Live ${Math.random()}`}
+        content={`F1online.sk Live`}
       />
       <meta key="meta_type" property="og:type" content="website" />
       <meta
