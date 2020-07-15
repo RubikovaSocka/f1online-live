@@ -10,6 +10,9 @@ export default class DiskusnyBox extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      onClient: false
+    }
     this.postMessageReceived = this.postMessageReceived.bind(this);
   }
 
@@ -19,6 +22,9 @@ export default class DiskusnyBox extends React.Component {
       discourseEmbedUrl: this.props.discourseEmbedUrl
     };
     window.addEventListener("message", this.postMessageReceived, false);
+    this.setState({
+      onClient: true
+    });
   }
 
   componentWillUnmount() {
@@ -87,20 +93,25 @@ export default class DiskusnyBox extends React.Component {
   }
 
   render() {
-    return (
-      <div className={`discussion-box-container ${styles.box}`}>
-        <iframe
-          title="discussion box"
-          ref={el => {
-            this.iframe = el;
-          }}
-          src={this.getIframeSource()}
-          id="discourse-embed-frame"
-          width="100%"
-          frameBorder="0"
-        />
-      </div>
-    );
+    if (this.state.onClient) {
+      console.log("client")
+      return (
+        <div className={`discussion-box-container ${styles.box}`}>
+          <iframe
+            title="discussion box"
+            ref={el => {
+              this.iframe = el;
+            }}
+            src={this.getIframeSource()}
+            id="discourse-embed-frame"
+            width="100%"
+            frameBorder="0"
+          />
+        </div>
+      );
+    }
+    console.log("not client")
+    return null;
   }
 }
 
