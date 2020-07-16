@@ -94,7 +94,6 @@ export default class DiskusnyBox extends React.Component {
 
   render() {
     if (this.state.onClient) {
-      console.log("client")
       return (
         <div className={`discussion-box-container ${styles.box}`}>
           <iframe
@@ -110,7 +109,6 @@ export default class DiskusnyBox extends React.Component {
         </div>
       );
     }
-    console.log("not client")
     return null;
   }
 }
