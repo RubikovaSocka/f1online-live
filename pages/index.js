@@ -22,7 +22,8 @@ export default class index extends Component {
       opened: ARTICLES,
       fpResultsPanelOpened: true,
       index: 0,
-      windowWidth: 320
+      windowWidth: 320,
+      venueName: ""
     };
     this.infoboxPanelChangeState = this.infoboxPanelChangeState.bind(this);
     this.loadPostsFromServer = this.loadPostsFromServer.bind(this);
@@ -76,7 +77,7 @@ export default class index extends Component {
               `https://wpadmin.f1online.sk/wp-json/wp/v2/calendar/${acf.calendar_gp_id}`
             )
             .then(res => {
-              this.setState({ calendar: res.data.acf });
+              this.setState({ calendar: res.data.acf, venueName: res.data.acf.venue_name });
             });
         }
       });
@@ -167,7 +168,7 @@ export default class index extends Component {
       <div className={styles.leftPanel}>
         <LogoPanel />
         <div className={styles.gpTitle}>
-          <span>VC Rakúska</span>
+          <span>VC {this.state.venueName}</span>
         </div>
         <div className={styles.menu}>
           {this.state.topPosts ? (
