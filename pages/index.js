@@ -171,7 +171,9 @@ export default class index extends Component {
       <div className={styles.leftPanel}>
         <LogoPanel />
         <div className={styles.gpTitle}>
-          <span>VC {this.state.venueName}</span>
+          <span>
+            {this.state.venueName ? `VC ${this.state.venueName}` : ""}
+          </span>
         </div>
         <div className={styles.menu}>
           {this.state.topPosts ? (
