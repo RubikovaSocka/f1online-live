@@ -4,6 +4,7 @@ import Head from "next/head";
 export default function HeaderMeta() {
   return (
     <Head>
+      <title key="  ">{`F1online.sk Live`}</title>
       <link rel="shortcut icon" href="/favicon.ico" />
       <link
         rel="stylesheet"

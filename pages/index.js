@@ -355,9 +355,6 @@ export default class index extends Component {
     } else {
       return (
         <>
-          <Head>
-            <title key="meta_title">{`F1online.sk Live ${this.props.articleID}`}</title>
-          </Head>
           <div className={styles.swipableContainer}>
             {dataPanel}
             <SwipeableViews
