@@ -77,7 +77,10 @@ export default class index extends Component {
               `https://wpadmin.f1online.sk/wp-json/wp/v2/calendar/${acf.calendar_gp_id}`
             )
             .then(res => {
-              this.setState({ calendar: res.data.acf, venueName: res.data.acf.venue_name });
+              this.setState({
+                calendar: res.data.acf,
+                venueName: res.data.acf.venue_name
+              });
             });
         }
       });
@@ -337,9 +340,6 @@ export default class index extends Component {
     if (this.state.windowWidth > 1023) {
       return (
         <>
-          <Head>
-            <title key="meta_title">{`F1online.sk Live ${this.props.articleID}`}</title>
-          </Head>
           <div className={styles.container}>
             {leftPanel}
             <div className={styles.feedContainer}>
