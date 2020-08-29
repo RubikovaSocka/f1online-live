@@ -11,11 +11,10 @@
   font-family: "HK Grotesk";
   font-size: 14px;
   margin: 0 15px;
-  margin-top: 5px;
+  padding: 5px 0;
 }
 
 .autoloadBox {
-  
   label {
     display: flex;
     align-items: center;
@@ -84,41 +83,25 @@
   padding-bottom: 25px;
 }
 
-@media only screen and (min-width: 1024px) {
-  .scrollButton {
+.scrollButton {
+  @media only screen and (min-width: 1024px) {
     display: initial;
-    left: 625px;
+    display: none; //tmp
+    left: 590px;
   }
-}
-
-@media only screen and (min-width: 1120px) {
-  .scrollButton {
-    left: 710px;
+  @media only screen and (min-width: 1120px) {
+    left: 680px;
   }
-}
-
-@media only screen and (min-width: 1280px) {
-  .scrollButton {
+  @media only screen and (min-width: 1280px) {
     left: 705px;
   }
-}
-
-@media only screen and (min-width: 1360px) {
-  .scrollButton {
+  @media only screen and (min-width: 1360px) {
     left: 770px;
   }
-}
-
-
-@media only screen and (min-width: 1440px) {
-  .scrollButton {
+  @media only screen and (min-width: 1440px) {
     left: 860px;
   }
-}
-
-
-@media only screen and (min-width: 1600px) {
-  .scrollButton {
+  @media only screen and (min-width: 1600px) {
     left: 1020px;
   }
 }

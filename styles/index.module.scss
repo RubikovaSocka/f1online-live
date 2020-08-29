@@ -5,7 +5,7 @@ $feed-panel-width: 100%;
 
 $left-panel-width-1024: 220px;
 $top-panel-height-1024: 0;
-$right-panel-width-1024: 330px;
+$right-panel-width-1024: 370px;
 $feed-panel-width-1024: calc(
   100% - #{$left-panel-width-1024} - #{$right-panel-width-1024}
 );
@@ -36,14 +36,11 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 .swipableContainer {
   height: calc(100% - 50px);
   > div {
-   height: 100%;
+    height: 100%;
     > div {
       height: 100%;
     }
   }
-}
-.feedContainer {
-  width: 100%;
 }
 .rightPanel {
   width: 100%;
@@ -58,48 +55,6 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   //display: flex;
   //flex-direction: column;
   //justify-content: center;
-}
-
-.topArticlesPanel {
-  width: 100%;
-  height: calc(100% - 50px) !important;
-  padding-left: 25px;
-  overflow-x: hidden;
-  position: none;
-  top: 0;
-  left: 0;
-  background-color: #f1f1f1;
-  overflow-y: scroll;
-  z-index: 20;
-
-  display: none;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  transition: ease-in-out 0.45s;
-
-  button {
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    border: 0;
-    background: none;
-    cursor: pointer;
-    align-self: flex-end;
-    flex-shrink: 0;
-    color: #a2a2a2;
-
-    i {
-      margin: auto;
-    }
-    &:hover i {
-      color: black;
-    }
-  }
-  &.opened {
-    position: fixed;
-    display: flex;
-  }
 }
 
 .topHeader {
@@ -210,7 +165,7 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 }
 .partnerImage {
   width: 100%;
-}/*
+} /*
 @media only screen and (min-width: 360px) { 
   .rightPanel {
     height: 1
@@ -244,15 +199,14 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
 }
 */
 
-
 @media only screen and (min-width: 1024px) {
   .swipableContainer {
     height: calc(100vh - 50px);
     > div {
-     height: initial;
-     > div {
-     height: initial;
-     }
+      height: initial;
+      > div {
+        height: initial;
+      }
     }
   }
   .partnerImageLink {
@@ -270,7 +224,7 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   .container {
     height: 100%;
     width: 100%;
-  
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -278,7 +232,7 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   .leftPanel {
     width: $left-panel-width;
     height: 100%;
-  
+
     position: fixed;
     left: 0;
     top: 0;
@@ -289,71 +243,31 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   .feedContainer {
     margin-left: $left-panel-width;
     width: $feed-panel-width;
-    padding: 0 15px;
+    padding: 0;
   }
   .rightPanel {
     width: calc(100% - #{$left-panel-width} - #{$feed-panel-width});
     width: $right-panel-width;
-  
+
     height: 100%;
-  
+
     position: fixed;
     top: 0;
     right: 0;
     z-index: 5;
     background-color: white;
     box-shadow: $boxshadow;
-  
+
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  
-  .topArticlesPanel {
-    width: $feed-panel-width;
-    height: 100%;
-    padding-left: 25px;
-    z-index: 3;
-  
-    position: fixed;
-    top: 0;
-    left: calc(#{$left-panel-width} - #{$feed-panel-width});
-  
-    background-color: #f1f1f1;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  
-    transition: ease-in-out 0.45s;
-  
-    button {
-      width: 35px;
-      height: 35px;
-      padding: 0;
-      border: 0;
-      background: none;
-      cursor: pointer;
-      align-self: flex-end;
-      flex-shrink: 0;
-      color: #a2a2a2;
-  
-      i {
-        margin: auto;
-      }
-      &:hover i {
-        color: black;
-      }
-    }
-    &.opened {
-      left: 220px;
-    }
-  }
-  
+
+
   .topHeader {
     width: $right-panel-width;
     height: $top-panel-height;
-  
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -363,12 +277,12 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   .mainContentContainer {
     width: 100%;
     height: calc(100vh - #{$top-panel-height});
-  
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
   }
-  
+
   .chatContainer {
     height: 100%;
     width: 100%;
@@ -396,17 +310,17 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
     width: 100%;
     padding: 0;
     padding-left: 10px;
-  
+
     font-family: "HK Grotesk";
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-  
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-  
+
     &:hover,
     &.selected {
       background-color: #f1f1f1;
@@ -421,56 +335,169 @@ $boxshadow: 0 0 8px rgba(0, 0, 0, 0.12);
   .leftPanel {
     width: $left-panel-width-1024;
   }
-  .feedContainer {
-    margin-left: $left-panel-width-1024;
-    width: $feed-panel-width-1024;
-    padding: 0 15px;
-  }
+
   .rightPanel {
     width: calc(100% - #{$left-panel-width-1024} - #{$feed-panel-width-1024});
     width: $right-panel-width-1024;
   }
-  .topArticlesPanel {
-    padding-left: 20px;
-    width: $feed-panel-width-1024;
-    left: calc(#{$left-panel-width-1024} - #{$feed-panel-width-1024});
-  }
+
   .swipableContainer {
     //position: relative;
     position: relative;
     z-index: 15;
     //height: 100vh;
   }
-
 }
 
 @media only screen and (min-width: 1280px) {
   .leftPanel {
     width: $left-panel-width-1280;
   }
-  .feedContainer {
-    margin-left: $left-panel-width-1280;
-    width: $feed-panel-width-1280;
-    padding: 0 15px;
-  }
   .rightPanel {
     width: calc(100% - #{$left-panel-width-1280} - #{$feed-panel-width-1280});
     width: $right-panel-width-1280;
   }
-  .topArticlesPanel {
+}
+
+.feedContainer {
+  width: 100%;
+
+  @media only screen and (min-width: 1024px) {
+    margin-left: $left-panel-width-1024;
+    width: $feed-panel-width-1024;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    margin-left: $left-panel-width-1280;
+    width: $feed-panel-width-1280;
+  }
+}
+/*
+.topArticlesPanel {
+  width: $feed-panel-width;
+  height: 100%;
+  padding-left: 25px;
+  z-index: 3;
+
+  position: fixed;
+  top: 0;
+  left: calc(#{$left-panel-width} - #{$feed-panel-width});
+
+  background-color: #f1f1f1;
+
+  display: none;
+  
+  flex-direction: column;
+  justify-content: flex-start;
+
+  transition: ease-in-out 0.45s;
+
+  button {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    align-self: flex-end;
+    flex-shrink: 0;
+    color: #a2a2a2;
+
+    i {
+      margin: auto;
+    }
+    &:hover i {
+      color: black;
+    }
+  }
+  &.opened {
+    left: 220px;
+  }
+}*/
+.topArticlesPanel {
+  /*
+  width: 100%;
+  
+  padding-left: 25px;
+  
+  position: none;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  
+  z-index: 20;
+
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  transition: ease-in-out 0.45s;
+  */
+
+  width: $feed-panel-width;
+  height: calc(100% - 50px) !important;
+  
+  padding-left: 25px;
+  z-index: 3;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  position: fixed;
+  top: 0;
+  left: calc(#{$left-panel-width} - #{$feed-panel-width});
+
+  background-color: #f1f1f1;
+
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  transition: ease-in-out 0.45s;
+  
+  @media only screen and (min-width: 1024px) {
+    display: flex;
+    height: 100% !important;
+    padding-left: 20px;
+    width: $feed-panel-width-1024;
+    left: calc(#{$left-panel-width-1024} - #{$feed-panel-width-1024});
+  }
+  @media only screen and (min-width: 1280px) {
     padding-left: 20px;
     width: $feed-panel-width-1280;
     left: calc(#{$left-panel-width-1280} - #{$feed-panel-width-1280});
   }
-}
-
-@media only screen and (min-width: 1360px) {
-  .topArticlesPanel {
+  @media only screen and (min-width: 1360px) {
     padding-left: 25px;
   }
-}
-@media only screen and (min-width: 1440px) {
-  .topArticlesPanel {
+  @media only screen and (min-width: 1440px) {
     width: 590px;
+  }
+
+  button {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    align-self: flex-end;
+    flex-shrink: 0;
+    color: #a2a2a2;
+
+    i {
+      margin: auto;
+    }
+    &:hover i {
+      color: black;
+    }
+  }
+  &.opened {
+    position: fixed;
+    display: flex;
+    
+    @media only screen and (min-width: 1024px){
+      left: 220px;
+    }
   }
 }

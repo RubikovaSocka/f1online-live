@@ -20,6 +20,7 @@ export default class index extends Component {
     this.state = {
       infoboxPanelOpened: false,
       opened: ARTICLES,
+      opened: "",
       fpResultsPanelOpened: true,
       index: 0,
       windowWidth: 320,

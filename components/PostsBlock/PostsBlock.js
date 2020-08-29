@@ -22,7 +22,8 @@ export default class PostsBlock extends Component {
       spinnerLoading: false,
       focusMaxTimeout: 25,
       focusTimeoutRunning: false,
-      windowHeight: 600
+      windowHeight: 600,
+      windowWidth: 380
     };
     this.handleFormInputChange = this.handleFormInputChange.bind(this);
     this.scrollListener = this.scrollListener.bind(this);
@@ -84,11 +85,11 @@ export default class PostsBlock extends Component {
   };
 
   scrollListener() {
-    if (this.state.scrolledToTop && window.pageYOffset > 30) {
+    if (this.state.scrolledToTop && window.pageYOffset > 70) {
       this.setState({
         scrolledToTop: false
       });
-    } else if (!this.state.scrolledToTop && window.pageYOffset < 30) {
+    } else if (!this.state.scrolledToTop && window.pageYOffset < 70) {
       this.setState({
         scrolledToTop: true
       });
@@ -101,7 +102,8 @@ export default class PostsBlock extends Component {
 
   componentDidMount() {
     this.setState({
-      windowHeight: window.innerHeight
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth
     });
     this.fetchMoreOldPosts();
     window.addEventListener("blur", this.onBlur);
@@ -210,7 +212,7 @@ export default class PostsBlock extends Component {
           dataLength={posts.length}
           next={this.fetchMoreOldPosts}
           hasMore={this.state.hasMoreOldPosts}
-          height={this.state.windowHeight - 80}
+          height={this.state.windowHeight - (this.state.windowWidth < 400 ? 80 : 34)}
           loader={
             <div className={styles.loadingSpinnerContainer}>
               <LoadingSpinner />

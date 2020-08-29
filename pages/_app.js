@@ -7,7 +7,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pageviewInSeconds: 60
+      pageviewInSeconds: 45
     };
   }
 
@@ -16,7 +16,7 @@ export default class App extends Component {
     ReactGA.initialize(trackingId);
 
     this.analyticsInterval = setTimeout(
-      () => ReactGA.pageview(window.location.pathname),
+      () => ReactGA.pageview("https://f1online.sk/live"),
       this.state.pageviewInSeconds * 1000
     );
   }
