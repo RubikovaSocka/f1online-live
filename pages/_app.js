@@ -16,7 +16,7 @@ export default class App extends Component {
     ReactGA.initialize(trackingId);
 
     this.analyticsInterval = setTimeout(
-      () => ReactGA.pageview("https://f1online.sk/live"),
+      () => ReactGA.pageview("/live"),
       this.state.pageviewInSeconds * 1000
     );
   }
